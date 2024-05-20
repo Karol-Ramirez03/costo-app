@@ -1,70 +1,187 @@
 export const info = [
     {
-        id: "5d86371f2343e37870b91ef1",
-        about: "Mollit officia ad excepteur anim proident incididunt eiusmod mollit consectetur id sit velit. Laborum ut magna officia qui laboris eiusmod do culpa. Culpa dolor officia velit cillum culpa deserunt cupidatat cillum ipsum laborum.",
-        name: "Hulk",
-        value1: "2",
-        value2: "5",
+        about: "¿Que nivel de calidad estas buscando?",
+        name: "Calidad",
         imagenes: [
             {
-                src: "https://m.media-amazon.com/images/M/MV5BYTU4NmRhNTctMjI2ZS00ZTUyLWI1ZjEtZWU1ODAxMjM5MzlmXkEyXkFqcGdeQXVyNDQxNjcxNQ@@._V1_UY1200_CR165,0,630,1200_AL_.jpg",
-                value: "2"
+                src: "./src/users/create-tabla/imagenes/P-1/calidadOptima.png",
+                value: "",
+                descripcion: "Calidad Optima",
             },
             {
-                src: "https://m.media-amazon.com/images/M/MV5BYTU4NmRhNTctMjI2ZS00ZTUyLWI1ZjEtZWU1ODAxMjM5MzlmXkEyXkFqcGdeQXVyNDQxNjcxNQ@@._V1_UY1200_CR165,0,630,1200_AL_.jpg",
-                value: "5"
-            }
+                src: "./src/users/create-tabla/imagenes/P-1/calidadPrecio.png",
+                value: "",
+                descripcion: "Buena Relacion Calidad/Precio",
+            },
+            {
+                src: "./src/users/create-tabla/imagenes/P-1/noImportaLaCalidad.png",
+                value: "",
+                descripcion: "No me importa tanto la calidad",
+            },
         ]
     },
     {
-        id: "5d86371f2343e37870b91ef1",
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eu lorem ultricies placerat id et sapien. Cras volutpat massa quis ipsum tempus, ut interdum nisl sodales.",
-        name: "Spiderman",
-        value1: "3",
-        value2: "6",
+        about: "¿Qué tipo de app necesitas?",
+        name: "tipo de app",
         imagenes: [
             {
-                src: "https://www.example.com/spiderman1.jpg",
-                value: "3"
+                src: "src/users/create-tabla/imagenes/P-2/android.png",
+                value: "3",
+                descripcion: "Aplicacion Android",
             },
             {
-                src: "https://www.example.com/spiderman2.jpg",
-                value: "6"
-            }
+                src: "src/users/create-tabla/imagenes/P-2/ios.png",
+                value: "",
+                descripcion:"Aplicacion iOS",
+            },
+            {
+                src: "src/users/create-tabla/imagenes/P-2/windows-phone.png",
+                value: "",
+                descripcion: "Aplicacion Windows Phone",
+            },
+            {
+                src: "src/users/create-tabla/imagenes/P-2/android-ios.png",
+                value: "",
+                descripcion: "Aplicacion Android + iOS",
+            },
+            {
+                src: "",
+                value: "",
+                descripcion: "Aplicacion De Escritorio",
+            },
         ]
     },
     {
-        id: "5d86371f2343e37870b91ef1",
-        about: "Vivamus vehicula erat in nunc dictum molestie. Duis eu eleifend metus. Aliquam erat volutpat. Sed suscipit ultrices augue nec volutpat. Nam at eros suscipit, hendrerit elit eget, vulputate nunc.",
-        name: "Iron Man",
-        value1: "4",
-        value2: "7",
+        about: "¿Qué diseño quieres que tenga tu App?",
+        name: "diseño",
         imagenes: [
             {
-                src: "https://www.example.com/ironman1.jpg",
-                value: "4"
+                src: "src/users/create-tabla/imagenes/P-3/sencilla.png",
+                value: "",
+                descripcion:"Interfaz sencilla",
             },
             {
-                src: "https://www.example.com/ironman2.jpg",
-                value: "7"
-            }
+                src: "src/users/create-tabla/imagenes/P-3/personalizada.png",
+                value: "",
+                descripcion:"Interfaz personalizada",
+            },
+            {
+                src: "src/users/create-tabla/imagenes/P-3/web.png",
+                value: "",
+                descripcion: "Interfaz Replicada De la Web",
+            },
+            {
+                src: "src/users/create-tabla/imagenes/P-3/sinDiseño.png",
+                value: "",
+                descripcion: "No Necesito diseño",
+            },
         ]
     },
     {
-        id: "5d86371f2343e37870b91ef1",
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eu lorem ultricies placerat id et sapien. Cras volutpat massa quis ipsum tempus, ut interdum nisl sodales.",
-        name: "Capitán América",
-        value1: "8",
-        value2: "9",
+        about: "¿Cómo quieres sacar beneficio a tu App?",
+        name: "beneficios app",
         imagenes: [
             {
-                src: "https://www.example.com/captainamerica1.jpg",
-                value: "8"
+                src: "",
+                value: "",
+                descripcion: "",
             },
             {
-                src: "https://www.example.com/captainamerica2.jpg",
-                value: "9"
-            }
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+            {
+                src: "src/users/create-tabla/imagenes/P-4/comprasEnApp.png",
+                value: "",
+                descripcion: "Compras Dentro de la app ",
+            },
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
         ]
-    }
+    },
+    {
+        about: "",
+        name: "",
+        imagenes: [
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+        ]
+    },
+    {
+        about: "",
+        name: "",
+        imagenes: [
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+        ]
+    },
+    {
+        about: "",
+        name: "",
+        imagenes: [
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+        ]
+    },
+    {
+        about: "",
+        name: "",
+        imagenes: [
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+        ]
+    },
+    {
+        about: "",
+        name: "",
+        imagenes: [
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+            {
+                src: "",
+                value: "",
+                descripcion: "",
+            },
+        ]
+    },
+    
 ];

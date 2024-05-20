@@ -29,24 +29,28 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     const { arreglo, paginas, paginaActiva, desde: nuevaDesde } = await loadInfo(limite, desde);
     element.innerHTML = '';
     const paginationControls = document.createElement('div');
+    paginationControls.classList.add('d-flex', 'justify-content-center', 'gap-4');
+
     paginationControls.innerHTML = `
+    
         <button id="anterior">Anterior</button>
         <span>${paginaActiva} / ${paginas}</span>
+        <div class="contentprecio" style="width: 20%"></div>
     `;
     element.appendChild(paginationControls);
     console.log(arreglo)
     arreglo.forEach(item => {
         const itemElement = document.createElement('div');
+        itemElement.classList.add('align-items-center', 'd-flex', 'flex-column')
         if (item) {
             itemElement.innerHTML = `
-                <h2>${item.name}</h2>
                 <p>${item.about}</p>
-                <div  class="row">
+                <div  class="row justify-content-center flex-wrap'" style="width: 80%">
                     ${item.imagenes.map(imagen => `
-                    <div class="card siguiente" style="width: 18rem;">
+                    <div class="card siguiente " style="width: 20%;">
                         <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top " alt="${item.name}">
                         <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">${imagen.descripcion}</p>
                         </div>
                     </div>`).join('')}
                 </div>
@@ -57,12 +61,21 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
 
 
     const btnAnterior = paginationControls.querySelector('#anterior');
+    const divcontent = paginationControls.querySelector('.contentprecio');
     const imagenes = element.querySelectorAll('.siguiente');
 
     if (paginaActiva > 1) {
         btnAnterior.style.display = 'inline';
+
     } else {
         btnAnterior.style.display = 'none';
+
+    }
+    if (paginaActiva > 2) {
+        divcontent.style.display = 'inline';
+
+    } else {
+        divcontent.style.display = 'none';
     }
 
     imagenes.forEach(imagen => {
