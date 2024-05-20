@@ -1,20 +1,28 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-import { UsersApp } from './src/users/users-app.js'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "./style.css";
+import { UsersApp } from "./src/users/users-app.js";
+import "./src/users/pantallainicio/llamari.js";
 
-const boton = document.querySelector('.activar')
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#app").innerHTML = `
+  
+  <div id=contenedor>
+  <card-init></card-init>
+  <button class="activar">
+              <h4><strong>CALCULAR COSTE</strong></h4>
+            </button>
+  </div>
+`;
+  const boton = document.querySelector(".activar");
+  if (boton) {
+    boton.addEventListener("click", () => {
+      document.querySelector("#app").innerHTML = `
+      <div id="contenedor">
+      </div>
+    `;
 
-boton.addEventListener('click', () => {
-    document.querySelector('#app').innerHTML = `
-    
-    <div id='contenedor'>
-      
-    </div>
-  `
-  const element = document.querySelector('#contenedor');
-  UsersApp(element)
-  const navegacion = document.querySelector('.navegacion')
-})
+      const element = document.querySelector("#contenedor");
+      UsersApp(element);
+      const navegacion = document.querySelector(".navegacion");
+    });
+  }
+});
