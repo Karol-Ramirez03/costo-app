@@ -1,5 +1,5 @@
 import { info } from "./informacion.js";
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 const infoAdicional = {
     name: "Adicional",
     about: "Contenido adicional...",
@@ -41,13 +41,15 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
             itemElement.innerHTML = `
                 <h2>${item.name}</h2>
                 <p>${item.about}</p>
-                ${item.imagenes.map(imagen => `
-                <div class="card siguiente" style="width: 18rem;">
-                    <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top " alt="${item.name}">
-                    <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>`).join('')}
+                <div  class="row">
+                    ${item.imagenes.map(imagen => `
+                    <div class="card siguiente" style="width: 18rem;">
+                        <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top " alt="${item.name}">
+                        <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>`).join('')}
+                </div>
             `;
         }
         element.appendChild(itemElement);
