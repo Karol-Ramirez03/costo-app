@@ -33,21 +33,23 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
 
     paginationControls.innerHTML = `
     
-        <button id="anterior">Anterior</button>
-        <span>${paginaActiva} / ${paginas}</span>
+        <p class="ant" id="anterior"> ← Anterior</p>
+        <span class="title2">${paginaActiva} / ${paginas}</span>
         <div class="contentprecio" style="width: 20%"></div>
     `;
     element.appendChild(paginationControls);
     console.log(arreglo)
+    // Esto son las cartas
+    // Div que contiene las img
     arreglo.forEach(item => {
         const itemElement = document.createElement('div');
-        itemElement.classList.add('align-items-center', 'd-flex', 'flex-column')
+        itemElement.classList.add('align-items-center', 'd-flex', 'flex-column','gap-4')
         if (item) {
             itemElement.innerHTML = `
-                <p>${item.about}</p>
-                <div  class="row justify-content-center flex-wrap'" style="width: 80%">
+                <h2><strong>${item.about}</strong></h2>  
+                <div  class="row justify-content-center flex-wrap espacio"  style="width: 100%" >
                     ${item.imagenes.map(imagen => `
-                    <div class="card siguiente " style="width: 20%;">
+                    <div class="card siguiente " style="width: 17%;">
                         <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top " alt="${item.name}">
                         <div class="card-body">
                         <p class="card-text">${imagen.descripcion}</p>

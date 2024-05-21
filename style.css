@@ -10,7 +10,33 @@ a {
 a:hover {
   color: #535bf2;
 }
-
+#contenedor{
+    padding: 4.2rem;
+}
+.card{
+    background-color: #3d3935;
+    border: none;
+}
+.ant{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 2%;
+}
+/* .ant :hover{
+    
+} */
+.title2{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 3%;
+}
+.espacio{
+    display: flex;
+    gap: 5%;
+}
 body {
   background-color: #3d3935;
   margin: 0;
@@ -39,6 +65,13 @@ h1 {
   display: flex;
   align-items: center;
 }
+h2{
+    color: #ffffff;
+}
+h5{
+    display: flex;
+    align-items: center; 
+}
 span {
   color: #ffffff;
 }
@@ -53,9 +86,13 @@ span {
   font-weight: 700;
 }
 #app {
-  max-width: 1280px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+  align-items: center;
   text-align: center;
 }
 span {
@@ -67,15 +104,12 @@ button {
   background-color: #535bf2;
   color: #fff;
   background-image: linear-gradient(to left, #7a56f4, #14e2cd);
-  position: relative;
   display: inline-block;
   max-width: 100%;
   margin: 0.5em 0;
-  padding: 1em 3em;
+  padding: 2.7% 6.5%;
   border: 0;
   border-radius: 5px;
-  line-height: 1.42857143;
-  text-align: center;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
