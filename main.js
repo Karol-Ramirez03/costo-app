@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <div id=contenedor>
   <card-init></card-init>
   <button class="activar">
-              <h4><strong>CALCULAR COSTE</strong></h4>
+              <h5><strong>CALCULAR COSTE</strong></h5>
             </button>
   </div>
 `;
