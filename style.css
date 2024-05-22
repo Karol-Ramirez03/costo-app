@@ -157,7 +157,12 @@ button {
   border: solid black 1px;
   background:  linear-gradient(to left, #7a56f4, #14e2cd);
 }
-
+.contenedor-login{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
 
 @media (prefers-color-scheme: light) {
   :root {

@@ -1,4 +1,5 @@
 import { info } from "./informacion.js";
+import { addLogin } from "../login/login.js";
 import 'bootstrap/dist/css/bootstrap.min.css'
 const infoAdicional = {
     name: "",
@@ -105,6 +106,8 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
                 cargarInfo(element, limite, 2 * limite); // Comenzar desde el tercer elemento
             } else if (paginaActiva < paginas) {
                 cargarInfo(element, limite, nuevaDesde + limite);
+            }else if (paginaActiva === paginas) {
+                addLogin(element); // Llama a addLogin cuando se alcanza la última página
             }
         });
     });
@@ -124,6 +127,9 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
             }
         }
     });
+    if (paginaActiva === paginas) {
+        addLogin(element); // Llama a addLogin cuando se alcanza la última página
+    }
 };
 
 function eliminarUltimoDato() {

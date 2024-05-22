@@ -1,6 +1,7 @@
 /// aqui se importa todo
 import { cargarInfo } from "./create-tabla/mostrarDatos"
-export const UsersApp = async( element ) => {
+import { addLogin } from "./login/login"
 
-    cargarInfo(element)
+export const UsersApp = async( element ) => {
+    await cargarInfo(element)
 }
