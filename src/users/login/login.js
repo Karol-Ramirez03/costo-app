@@ -3,6 +3,10 @@ const loginBar=document.getElementById('login')
 
 const addLogin =()=>{
     loginBar.innerHTML =`
+    <style rel="stylesheet">
+      @import "./css/bootstrap/bootstrap.min.css";
+      @import "./style.css";
+    </style>
     <h1 class="titulo">lOGIN</h1>
     <br>
     <br>
