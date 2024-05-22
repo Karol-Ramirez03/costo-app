@@ -178,4 +178,14 @@ button {
   h1 {
     font-size: 50px;
   }
+  .titulo{
+    color:white;
+  }
+  #login{
+    border-radius: 20px;
+    background:  linear-gradient( #7a56f4, #14e2cd);
+    padding: 2%;
+    text-align: center;
+    width: 40%;
+  }
 }
