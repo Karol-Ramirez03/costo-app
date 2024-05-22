@@ -139,6 +139,26 @@ button {
   opacity: 0;
   transform: skew(-15deg);
 }
+.titulo{
+  color:white;
+}
+#login{
+  border-radius: 20px;
+  background:  linear-gradient( #7a56f4, #14e2cd);
+  padding: 2%;
+  text-align: center;
+  width: 40%;
+}
+.login-btn{
+  border: solid white 1px;
+  background:  linear-gradient(to right, #7a56f4, #14e2cd);
+}
+.login-btn:hover{
+  border: solid black 1px;
+  background:  linear-gradient(to left, #7a56f4, #14e2cd);
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
