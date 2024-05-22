@@ -11,7 +11,7 @@ a:hover {
   color: #535bf2;
 }
 #contenedor{
-    padding: 4.2rem;
+    width: 100%;
 }
 .card{
     background-color: #3d3935;
@@ -61,8 +61,10 @@ p {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #ffffff;
   display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #ffffff;
   align-items: center;
 }
 h2{
@@ -82,9 +84,7 @@ span {
   display: flex;
   align-items: center;
 }
-.fonts-loaded h1 {
-  font-weight: 700;
-}
+
 #app {
   min-height: 100vh;
   display: flex;
@@ -107,12 +107,20 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 0.5em 0;
-  padding: 2.7% 6.5%;
+  padding: 2% 4%;
   border: 0;
   border-radius: 5px;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
+}
+.contentprecio {
+  font-weight: bolder;
+  color: white;
+  right: 1px;
+  top: 3%;
+  align-self: flex-start;
+  position: absolute;
 }
 .button:after {
   position: absolute;

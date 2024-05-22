@@ -1,19 +1,25 @@
 import { info } from "./informacion.js";
 import 'bootstrap/dist/css/bootstrap.min.css'
 const infoAdicional = {
-    name: "Adicional",
-    about: "Contenido adicional...",
+    name: "",
+    about: "",
     imagenes: [
         {
-            src: "URL_DE_LA_IMAGEN_ADICIONAL1",
-            value: "valor1"
+            src: "",
+            value: ""
         },
         {
-            src: "URL_DE_LA_IMAGEN_ADICIONAL2",
-            value: "valor2"
-        }
+            src: "",
+            value: ""
+        },
+        {
+            src: "",
+            value: ""
+        },
     ]
 };
+const data = []
+
 async function loadInfo(limite = 1, desde = 0, ) {
     return new Promise((resolve) => {
         const totalItems = info.length 
@@ -35,7 +41,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     
         <p class="ant" id="anterior"> ← Anterior</p>
         <span class="title2">${paginaActiva} / ${paginas}</span>
-        <div class="contentprecio" style="width: 20%"></div>
+        <div class="contentprecio" style="width: 10%"></div>
     `;
     element.appendChild(paginationControls);
     console.log(arreglo)
@@ -43,14 +49,14 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     // Div que contiene las img
     arreglo.forEach(item => {
         const itemElement = document.createElement('div');
-        itemElement.classList.add('align-items-center', 'd-flex', 'flex-column','gap-4')
+        itemElement.classList.add('align-items-around', 'd-flex', 'flex-column','gap-4')
         if (item) {
             itemElement.innerHTML = `
                 <h2><strong>${item.about}</strong></h2>  
                 <div  class="row justify-content-center flex-wrap espacio"  style="width: 100%" >
                     ${item.imagenes.map(imagen => `
-                    <div class="card siguiente " style="width: 17%;">
-                        <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top " alt="${item.name}">
+                    <div class="card" style="width: 13%;">
+                        <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top siguiente" alt="${item.name}">
                         <div class="card-body">
                         <p class="card-text">${imagen.descripcion}</p>
                         </div>
@@ -61,10 +67,16 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
         element.appendChild(itemElement);
     });
 
-
     const btnAnterior = paginationControls.querySelector('#anterior');
     const divcontent = paginationControls.querySelector('.contentprecio');
     const imagenes = element.querySelectorAll('.siguiente');
+
+    const updateDivContent = () => {
+        const sumaTotal = sumarValores(data);
+        divcontent.textContent = `${sumaTotal} cop`;
+    };
+
+    updateDivContent();
 
     if (paginaActiva > 1) {
         btnAnterior.style.display = 'inline';
@@ -82,8 +94,11 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
 
     imagenes.forEach(imagen => {
         imagen.addEventListener('click', (e) => {
-            let valor = e.target.getAttribute('data-value');
-            localStorage.setItem(e.target.alt, valor);
+            const name = e.target.alt;
+            const value = e.target.getAttribute('data-value');
+            data.push([name, value]);
+            console.log(data)
+            localStorage.setItem(name, JSON.stringify(data));
             const imagenEspecificaSrc = "https://www.example.com/spiderman1.jpg"; // Reemplazar con la URL de la imagen específica que activa la información adicional
             if (e.target.src === imagenEspecificaSrc) {
                 info.splice(2,0,infoAdicional)
@@ -97,10 +112,10 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     btnAnterior.addEventListener('click', async () => {
         console.log("Pagina activa:", paginaActiva);
         if (paginaActiva > 1) {
-            if (paginaActiva === 3 && info.length === 5) {
+            if (paginaActiva === 3 && info.length === 11) {
                 console.log("Cargando datos desde info...");
-                info.splice(2,1)
                 eliminarUltimoDato();
+                info.splice(2,1)
                 await cargarInfo(element, limite, nuevaDesde - limite);
             } else {
                 console.log("Cargando datos desde datos...");
@@ -114,17 +129,18 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
 function eliminarUltimoDato() {
     const keys = Object.keys(localStorage);
     if (keys.length > 0) {
-        const lastKey = keys[keys.length - 1];
-        console.log(lastKey)
-        localStorage.removeItem(lastKey);
-        console.log(`Eliminado el último dato con clave: ${lastKey}`);
+        data.pop()
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const contenedor = document.querySelector('.card');
-    if (contenedor) {
-        cargarInfo(contenedor);
+function sumarValores(lista) {
+    let sumaTotal = 0;
+    for (let i = 0; i < lista.length; i++) {
+        let valor = parseFloat(lista[i][1]);
+        if (!isNaN(valor)) {
+            sumaTotal += valor;
+        }
     }
-});
+    return sumaTotal;
+}
 
