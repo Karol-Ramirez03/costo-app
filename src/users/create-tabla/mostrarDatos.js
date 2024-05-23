@@ -50,13 +50,13 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     // Div que contiene las img
     arreglo.forEach(item => {
         const itemElement = document.createElement('div');
-        itemElement.classList.add('align-items-around', 'd-flex', 'flex-column','gap-4')
+        itemElement.classList.add('align-items-around', 'd-flex', 'flex-column','gap-4', 'contenedor-opciones')
         if (item) {
             itemElement.innerHTML = `
                 <h2><strong>${item.about}</strong></h2>  
                 <div  class="row justify-content-center flex-wrap espacio"  style="width: 100%" >
                     ${item.imagenes.map(imagen => `
-                    <div class="card" style="width: 13%;">
+                    <div class="card">
                         <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top siguiente" alt="${item.name}">
                         <div class="card-body">
                         <p class="card-text">${imagen.descripcion}</p>

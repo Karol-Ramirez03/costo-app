@@ -16,6 +16,7 @@ a:hover {
 .card{
     background-color: #3d3935;
     border: none;
+    width: 13%
 }
 .ant{
     display: flex;
@@ -176,11 +177,31 @@ button {
     background-color: #f9f9f9;
   }
 }
-@media screen and (min-width: 678px) {
+@media screen and (max-width: 898px) {
   .button {
     font-size: 24px;
   }
   h1 {
     font-size: 50px;
+  }
+  .card{
+    width: 60%;
+  }
+  .espacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+  }
+  .contenedor-opciones{
+    margin-top: 80px;
+  }
+  .ant{
+    top: 8px;
+  }
+
+  #login{
+    width: 90%;
   }
 }
