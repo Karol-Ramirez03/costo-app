@@ -1,6 +1,6 @@
 // const endBar=document.getElementById('endPage')
 
-export const addEndPage=(element,sumaTotal)=>{
+export const addEndPage=(element,sumaTotal,opciones)=>{
     //function formatearPrecio(numero) {
     //   return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     //  }

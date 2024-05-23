@@ -127,7 +127,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     });
     if (paginaActiva === paginas) {
         const valorFinal=sumarValores(data)
-        addLogin(element,valorFinal); // Llama a addLogin cuando se alcanza la última página
+        addLogin(element,valorFinal,data); // Llama a addLogin cuando se alcanza la última página
     }
 };
 

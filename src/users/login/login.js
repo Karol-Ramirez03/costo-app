@@ -1,7 +1,7 @@
 // const loginBar=document.getElementById('login')
 import { addEndPage } from "../pantallafinal/endPage"
 
-export const addLogin = (element,sumaTotal)=>{
+export const addLogin = (element,sumaTotal,opciones)=>{
     element.innerHTML = /* html */`
     <style rel="stylesheet">
       @import "./css/bootstrap/bootstrap.min.css";
@@ -80,7 +80,8 @@ export const addLogin = (element,sumaTotal)=>{
             apellido:'',
             correo:'',
             tipo:'',
-            ciudad:''
+            ciudad:'',
+            opciones:opciones,
         }
         const dataUsser=document.querySelector("#formUsser")
         const  datos= Object.fromEntries(new FormData(dataUsser).entries())
@@ -102,7 +103,7 @@ export const addLogin = (element,sumaTotal)=>{
         })
         const result = await response.json();
         console.log('Datos enviados correctamente:', result);
-        addEndPage(element,sumaTotal)
+        addEndPage(element,sumaTotal,opciones)
       
 })
 }
