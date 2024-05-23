@@ -18,7 +18,7 @@ export const addEndPage=(element,sumaTotal,opciones)=>{
                 <p class="endPage-title">¡Bien! ¡Hemos terminado!</p>
                 <h2 class="sub-title fs-5">¡Compártenos si te ha gustado!</h2>
             </div>
-            <div class="row justify-content-md-center" >
+            <div class="row justify-content-md-center centro-redes" >
                 <div class="red-face red col col-2">
                     <img src="src/users/pantallafinal/img/facebook.png" alt="facebook">
                     <p class="">Share</p>

@@ -94,7 +94,7 @@ export const addLogin = (element,sumaTotal,opciones)=>{
         user.ciudad=ciudad
         console.log(user)
 
-        const response = await fetch('https://66490ac84032b1331bed21bf.mockapi.io/users', {
+        const response = await fetch('https://664fcddfec9b4a4a602fe037.mockapi.io/users', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

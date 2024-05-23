@@ -296,4 +296,53 @@ button {
   .card-text{
     font-size: 25px;
   }
+  #contenedor-endPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }  
+  #endPage{
+    width: 60%;
+    img{
+        width: 28px;
+        margin: 0;
+    }
+    .in{
+        width: 48px;
+        
+    }
+    .sub-title{
+        color: white;
+        margin-bottom: 1.5%;
+    }
+    .endPage-title{
+        margin-bottom: 2.5%;
+    }    
+    .centro-redes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-c{
+      color: white;
+      background:  linear-gradient(to left, #7a56f4, #14e2cd);
+      font-size: 20px;
+      padding: 5px;
+    }
+    .precio{
+  
+      h1{
+          color: #14E2CD;
+          margin: 0;
+          padding: 0;
+          font-size: 40px;
+      }
+    }
+  }
+  .title {
+    width: 100%;
+    font-size: 5vw;
+  }
+  
 }
