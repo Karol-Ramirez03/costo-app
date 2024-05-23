@@ -166,7 +166,7 @@ button {
   
 }
 
-@media (prefers-color-scheme: light) {
+@media (max-width: 946px) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -178,7 +178,7 @@ button {
     background-color: #f9f9f9;
   }
 }
-@media screen and (max-width: 898px) {
+@media (max-width: 934px) {
   .button {
     font-size: 24px;
   }
@@ -197,6 +197,8 @@ button {
   }
   .contenedor-opciones{
     margin-top: 80px;
+    display: flex;
+    align-items: center;
   }
   .ant{
     top: 8px;
@@ -213,5 +215,8 @@ button {
     align-self: flex-start;
     position: absolute;
     width: auto;
+  }
+  .card-text{
+    font-size: 25px;
   }
 }

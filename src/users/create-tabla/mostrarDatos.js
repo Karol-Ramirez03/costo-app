@@ -31,7 +31,7 @@ async function loadInfo(limite = 1, desde = 0, ) {
     });
 }
 
-localStorage.clear()
+
 export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     const { arreglo, paginas, paginaActiva, desde: nuevaDesde } = await loadInfo(limite, desde);
     element.innerHTML = '';
@@ -54,7 +54,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
         if (item) {
             itemElement.innerHTML = `
                 <h2><strong>${item.about}</strong></h2>  
-                <div  class="row justify-content-center flex-wrap espacio"  style="width: 100%" >
+                <div  class="row justify-content-center flex-wrap espacio"  style="width: 99%" >
                     ${item.imagenes.map(imagen => `
                     <div class="card">
                         <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top siguiente" alt="${item.name}">
