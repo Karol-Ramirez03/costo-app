@@ -42,7 +42,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     
         <p class="ant" id="anterior"> ← Anterior</p>
         <span class="title2">${paginaActiva} / ${paginas}</span>
-        <div class="contentprecio" style="width: 10%"></div>
+        <div class="contentprecio"></div>
     `;
     element.appendChild(paginationControls);
     console.log(arreglo)

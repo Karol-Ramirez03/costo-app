@@ -122,6 +122,7 @@ button {
   top: 3%;
   align-self: flex-start;
   position: absolute;
+  width: 10%;
 }
 .button:after {
   position: absolute;
@@ -203,5 +204,14 @@ button {
 
   #login{
     width: 90%;
+  }
+  .contentprecio {
+    font-weight: bolder;
+    color: white;
+    right: 1%;
+    top: 3%;
+    align-self: flex-start;
+    position: absolute;
+    width: auto;
   }
 }
