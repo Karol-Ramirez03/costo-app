@@ -165,7 +165,84 @@ button {
   justify-content: center;
   
 }
+#contenedor-endPage{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+#endPage{
+  width: 60%;
+  img{
+      width: 28px;
+      margin: 0;
+  }
+  .red-in{
+      background-color:#0274B3 ;
+  }
+  .red-face{
+      background-color: #3566A5;
+  }
+  .red-goo{
+      background-color: #DC4234;
+  }
+  .red-twi{
+      background-color: #00A2F3;
+  }
+  .in{
+      width: 48px;
+      
+  }
+  .sub-title{
+      color: white;
+      margin-bottom: 1.5%;
+  }
+  .endPage-title{
+      margin-bottom: 2.5%;
+  }
+  p{
+      color: white;
+  }
+  
+  .red{
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      padding: 3px 5px 3px 3px;
+      border-radius: 3px;
+      p{
+          margin: 0;
+          color: white;
+      }
+  }
+}
 
+#volver{
+  margin-top: 2%;
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 15%;
+}
+.costo{
+  margin: 0;
+}
+.precio{
+  
+  h1{
+      color: #14E2CD;
+      margin: 0;
+      padding: 0;
+      font-size: 80px;
+  }
+}
+.btn-c{
+  color: white;
+  background:  linear-gradient(to left, #7a56f4, #14e2cd);
+  font-size: 25px;
+  padding: 20px 60px;
+}
 @media (max-width: 946px) {
   :root {
     color: #213547;

@@ -1,6 +1,7 @@
 // const loginBar=document.getElementById('login')
+import { addEndPage } from "../pantallafinal/endPage"
 
-export const addLogin = (element)=>{
+export const addLogin = (element,sumaTotal)=>{
     element.innerHTML = /* html */`
     <style rel="stylesheet">
       @import "./css/bootstrap/bootstrap.min.css";
@@ -101,6 +102,7 @@ export const addLogin = (element)=>{
         })
         const result = await response.json();
         console.log('Datos enviados correctamente:', result);
+        addEndPage(element,sumaTotal)
       
 })
 }

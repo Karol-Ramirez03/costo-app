@@ -20,7 +20,6 @@ const infoAdicional = {
     ]
 };
 const data = []
-
 async function loadInfo(limite = 1, desde = 0, ) {
     return new Promise((resolve) => {
         const totalItems = info.length 
@@ -75,6 +74,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     const updateDivContent = () => {
         const sumaTotal = sumarValores(data);
         divcontent.textContent = `${sumaTotal} cop`;
+        return sumaTotal
     };
 
     updateDivContent();
@@ -106,8 +106,6 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
                 cargarInfo(element, limite, 2 * limite); // Comenzar desde el tercer elemento
             } else if (paginaActiva < paginas) {
                 cargarInfo(element, limite, nuevaDesde + limite);
-            }else if (paginaActiva === paginas) {
-                addLogin(element); // Llama a addLogin cuando se alcanza la última página
             }
         });
     });
@@ -128,7 +126,8 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
         }
     });
     if (paginaActiva === paginas) {
-        addLogin(element); // Llama a addLogin cuando se alcanza la última página
+        const valorFinal=sumarValores(data)
+        addLogin(element,valorFinal); // Llama a addLogin cuando se alcanza la última página
     }
 };
 
