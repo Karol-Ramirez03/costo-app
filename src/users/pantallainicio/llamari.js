@@ -4,7 +4,7 @@ export class inicio extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = /* html */ `
             <style rel="stylesheet">
-                 @import "./css/bootstrap/bootstrap.min.css";
+                @import "./css/bootstrap/bootstrap.min.css";
                 @import "./style.css";
             </style>
             <div class="img"></div>

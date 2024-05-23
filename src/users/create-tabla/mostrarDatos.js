@@ -1,4 +1,5 @@
 import { info } from "./informacion.js";
+import { addLogin } from "../login/login.js";
 import 'bootstrap/dist/css/bootstrap.min.css'
 const infoAdicional = {
     name: "",
@@ -30,7 +31,7 @@ async function loadInfo(limite = 1, desde = 0, ) {
     });
 }
 
-localStorage.clear()
+
 export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     const { arreglo, paginas, paginaActiva, desde: nuevaDesde } = await loadInfo(limite, desde);
     element.innerHTML = '';
@@ -41,7 +42,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     
         <p class="ant" id="anterior"> ← Anterior</p>
         <span class="title2">${paginaActiva} / ${paginas}</span>
-        <div class="contentprecio" style="width: 10%"></div>
+        <div class="contentprecio"></div>
     `;
     element.appendChild(paginationControls);
     console.log(arreglo)
@@ -49,13 +50,13 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     // Div que contiene las img
     arreglo.forEach(item => {
         const itemElement = document.createElement('div');
-        itemElement.classList.add('align-items-around', 'd-flex', 'flex-column','gap-4')
+        itemElement.classList.add('align-items-around', 'd-flex', 'flex-column','gap-4', 'contenedor-opciones')
         if (item) {
             itemElement.innerHTML = `
                 <h2><strong>${item.about}</strong></h2>  
-                <div  class="row justify-content-center flex-wrap espacio"  style="width: 100%" >
+                <div  class="row justify-content-center flex-wrap espacio"  style="width: 99%" >
                     ${item.imagenes.map(imagen => `
-                    <div class="card" style="width: 13%;">
+                    <div class="card">
                         <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top siguiente" alt="${item.name}">
                         <div class="card-body">
                         <p class="card-text">${imagen.descripcion}</p>
@@ -105,6 +106,8 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
                 cargarInfo(element, limite, 2 * limite); // Comenzar desde el tercer elemento
             } else if (paginaActiva < paginas) {
                 cargarInfo(element, limite, nuevaDesde + limite);
+            }else if (paginaActiva === paginas) {
+                addLogin(element); // Llama a addLogin cuando se alcanza la última página
             }
         });
     });
@@ -124,6 +127,9 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
             }
         }
     });
+    if (paginaActiva === paginas) {
+        addLogin(element); // Llama a addLogin cuando se alcanza la última página
+    }
 };
 
 function eliminarUltimoDato() {

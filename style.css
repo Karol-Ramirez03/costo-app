@@ -16,6 +16,7 @@ a:hover {
 .card{
     background-color: #3d3935;
     border: none;
+    width: 13%
 }
 .ant{
     display: flex;
@@ -121,6 +122,7 @@ button {
   top: 3%;
   align-self: flex-start;
   position: absolute;
+  width: 10%;
 }
 .button:after {
   position: absolute;
@@ -157,9 +159,14 @@ button {
   border: solid black 1px;
   background:  linear-gradient(to left, #7a56f4, #14e2cd);
 }
+.contenedor-login{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
 
-
-@media (prefers-color-scheme: light) {
+@media (max-width: 946px) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -171,21 +178,45 @@ button {
     background-color: #f9f9f9;
   }
 }
-@media screen and (min-width: 678px) {
+@media (max-width: 934px) {
   .button {
     font-size: 24px;
   }
   h1 {
     font-size: 50px;
   }
-  .titulo{
-    color:white;
+  .card{
+    width: 60%;
   }
+  .espacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+  }
+  .contenedor-opciones{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .ant{
+    top: 8px;
+  }
+
   #login{
-    border-radius: 20px;
-    background:  linear-gradient( #7a56f4, #14e2cd);
-    padding: 2%;
-    text-align: center;
-    width: 40%;
+    width: 90%;
+  }
+  .contentprecio {
+    font-weight: bolder;
+    color: white;
+    right: 1%;
+    top: 3%;
+    align-self: flex-start;
+    position: absolute;
+    width: auto;
+  }
+  .card-text{
+    font-size: 25px;
   }
 }

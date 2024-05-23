@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const element = document.querySelector("#contenedor");
       UsersApp(element);
-      const navegacion = document.querySelector(".navegacion");
     });
   }
 });
