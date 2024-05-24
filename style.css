@@ -230,7 +230,9 @@ button {
   p{
       color: white;
   }
-  
+  .editar{
+    text-decoration: underline;
+  }
   .red{
       width: auto;
       display: flex;

@@ -45,7 +45,7 @@ export const addEndPage=(element,sumaTotal,opciones)=>{
                     <h1>${sumaTotal}</h1>
                     <h1>COP</h1>
                 </div>
-                <p class="">Editar respuestas</p>
+                <p class="editar">Editar respuestas</p>
                 <p class="fs-6">En CampusLands seleccionamos los mejores <strong> desarrolladores de apps y webs </strong> para tu proyecto. Publica tu proyecto en Yeeply o <br>mira algunos de nuestros casos  de éxito.</p>
             </div>
 
