@@ -50,11 +50,16 @@ export const addEndPage=(element,sumaTotal,opciones)=>{
             </div>
 
             <div>
-                <button class="btn-c btn">Crea tu proyecto</button>
+                <button class="crear btn-c btn">Crea tu proyecto</button>
             </div>
         </div>
     </div>
   `
+  const alertCharge=document.querySelector('.crear')
+
+  alertCharge.addEventListener('click',()=>{
+    alert('Sus datos han sido cargados de manera exitosa')
+  })
   const botonVolver=document.getElementById('volver')
   botonVolver.addEventListener('click',()=>{
     location.reload();
