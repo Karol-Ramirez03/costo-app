@@ -82,6 +82,8 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     if (paginaActiva > 1) {
         btnAnterior.style.display = 'inline';
 
+        
+
     } else {
         btnAnterior.style.display = 'none';
 
