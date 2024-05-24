@@ -56,7 +56,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
                 <div  class="row justify-content-center flex-wrap espacio"  style="width: 99%" >
                     ${item.imagenes.map(imagen => `
                     <div class="card">
-                        <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top siguiente" alt="${item.name}">
+                        <img src="${imagen.src}" data-value="${imagen.value}" class="card-img-top siguiente" alt="${imagen.descripcion}">
                         <div class="card-body">
                         <p class="card-text">${imagen.descripcion}</p>
                         </div>
