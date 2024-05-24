@@ -7,11 +7,21 @@ export class inicio extends HTMLElement {
                 @import "./css/bootstrap/bootstrap.min.css";
                 @import "./style.css";
             </style>
-            <div class="img"></div>
+            <div class="imgPrincipal">
+            <img src="src/users/create-tabla/imagenes/main_P/intro.png" alt="">
+            </div>
     
-            <h1 class="title fonts-loaded text-center">
-            ¿Cuánto cuesta desarrollar mi <span class='title1'> app</span>?
-            </h1>
+            <div class="prin-title">
+              <h1 class="title fonts-loaded text-center">
+              ¿Cuánto cuesta desarrollar mi
+              </h1> 
+              <div class="title-color">
+                  <h1 class="titleApp">
+                  app
+                  </h1>
+                  <h1>?</h1> 
+              </div> 
+            </div>
             <p>
               Calcula de forma rápida el coste para crear tu app, contestando estas
               sencillas preguntas.
