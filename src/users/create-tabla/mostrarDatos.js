@@ -2,20 +2,23 @@ import { info } from "./informacion.js";
 import { addLogin } from "../login/login.js";
 import 'bootstrap/dist/css/bootstrap.min.css'
 const infoAdicional = {
-    name: "",
-    about: "",
+    name: "modo escritorio",
+    about: "¿Que tipo de aplicacion deseas para tu escritorio?",
     imagenes: [
         {
-            src: "",
-            value: ""
+            src: "src/users/create-tabla/imagenes/eximg/nativo.png",
+            value: "1000000",
+            descripcion: "Nativo",
         },
         {
-            src: "",
-            value: ""
+            src: "src/users/create-tabla/imagenes/eximg/pwa.png",
+            value: "2000000",
+            descripcion: "pwa",
         },
         {
-            src: "",
-            value: ""
+            src: "src/users/create-tabla/imagenes/eximg/spa.png",
+            value: "3000000",
+            descripcion: "spa",
         },
     ]
 };
@@ -82,7 +85,7 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
     if (paginaActiva > 1) {
         btnAnterior.style.display = 'inline';
 
-        
+
 
     } else {
         btnAnterior.style.display = 'none';
@@ -102,8 +105,8 @@ export const cargarInfo = async (element, limite = 1, desde = 0, ) => {
             data.push([name, value]);
             console.log(data)
             localStorage.setItem(name, JSON.stringify(data));
-            const imagenEspecificaSrc = "https://www.example.com/spiderman1.jpg"; // Reemplazar con la URL de la imagen específica que activa la información adicional
-            if (e.target.src === imagenEspecificaSrc) {
+            const imagenEspecificaSrc = "./src/users/create-tabla/imagenes/P-2/escritorio.png"; 
+            if (e.target.getAttribute('src') === imagenEspecificaSrc) {
                 info.splice(2,0,infoAdicional)
                 cargarInfo(element, limite, 2 * limite); // Comenzar desde el tercer elemento
             } else if (paginaActiva < paginas) {

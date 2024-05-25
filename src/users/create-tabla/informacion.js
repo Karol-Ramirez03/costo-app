@@ -25,27 +25,27 @@ export const info = [
         name: "tipo",
         imagenes: [
             {
-                src: "src/users/create-tabla/imagenes/P-2/android.png",
+                src: "./src/users/create-tabla/imagenes/P-2/android.png",
                 value: "9000000",
                 descripcion: "Aplicacion Android",
             },
             {
-                src: "src/users/create-tabla/imagenes/P-2/ios.png",
+                src: "./src/users/create-tabla/imagenes/P-2/ios.png",
                 value: "15000000",
                 descripcion:"Aplicacion iOS",
             },
             {
-                src: "src/users/create-tabla/imagenes/P-2/windows-phone.png",
+                src: "./src/users/create-tabla/imagenes/P-2/windows-phone.png",
                 value: "9000000",
                 descripcion: "Aplicacion Windows Phone",
             },
             {
-                src: "src/users/create-tabla/imagenes/P-2/android-ios.png",
+                src: "./src/users/create-tabla/imagenes/P-2/android-ios.png",
                 value: "9000000",
                 descripcion: "Aplicacion Android + iOS",
             },
             {
-                src: "",
+                src: "./src/users/create-tabla/imagenes/P-2/escritorio.png",
                 value: "9000000",
                 descripcion: "Aplicacion De Escritorio",
             },
